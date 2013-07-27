@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Fetlife Message Autofiller",
+	"description": "Automatically fills a Fetlife message with set information",
+	"version": "1.0",
+	
+	"content_scripts": [
+		{
+			"matches" : ["*://fetlife.com/conversations/new*", "*://fetlife.com/formatting_guidelines"],
+			"js": ["jquery.js", "new.js"]
+		}
+	],
+	"permissions": [
+		"https://fetlife.com/",
+		"storage"
+	]
+	//"options_page": "options.html"
+}
